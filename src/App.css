@@ -1,0 +1,72 @@
+/* Global styles
+-----------------------------*/
+
+html {
+  box-sizing: border-box;
+  }
+
+  *,*::before,*::after{
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; /* By doing this it had helped to get rid of the white border we had around the whole webpage*/
+    background-color: white;
+}
+/* Opening Banner
+-----------------------------*/
+.opening {
+color: black;
+background-color: white;
+height: 100px;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+}
+
+.name {
+font-size: 20px;
+text-align:left;
+}
+/* Section under Opening Banner
+-----------------------------*/
+.navigationBar {
+color: black;
+background-color:#7bc3d1;
+height: 40px;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+}
+
+.navBarText {
+font-size: 15px;
+text-align:left;
+}
+/* map
+-----------------------------*/
+#map {
+  height:100vh;
+  width: 70%;
+  background-color: green;
+}
+
+
+
+/*Footer
+------------------------------------*/
+footer {
+  text-align: center;
+  background: #7bc3d1;
+}
+
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+  color: white; /*The icons on the bottom are colored white to pop*/
+}
+
+.ending h2 {
+  color: white;
+}
