@@ -36,16 +36,16 @@ class App extends Component {
     return (
       <div className="App">
         <section id="topBanner">
-          <div class="opening">
-            <div class="openingText">
-              <h1 class= "name"> Grocery Store Locator </h1>
+          <div className="opening">
+            <div className="openingText">
+              <h1 className= "name"> Grocery Store Locator </h1>
             </div>
           </div>
         </section>
         <section id="navBar">
-          <div class="navigationBar">
-            <div class="navText">
-              <h1 class= "navBarText"> Potential nav bar </h1>
+          <div className="navigationBar">
+            <div className="navText">
+              <h1 className= "navBarText"> Potential nav bar </h1>
               <button onClick = {this.toggleMenu}>
                 Locations
               </button>
@@ -55,12 +55,12 @@ class App extends Component {
         </section>
         <Map/>
         <footer id="contact">
-          <div class="ending">
+          <div className="ending">
             <h2>Let's Keep in Touch!</h2>
-            <div class = "contact-info">
-                <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> <span class="sr-only">Twitter</span> </a>
-                <a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> <span class="sr-only">LinkedIn</span></a>
-                <a href="#" target="_blank"><i class="fab fa-github-alt" aria-hidden="true"></i><span class="sr-only">Github</span></a>
+            <div className = "contact-info">
+                <a href="#" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i> <span className="sr-only">Twitter</span> </a>
+                <a href="#" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i> <span className="sr-only">LinkedIn</span></a>
+                <a href="#" target="_blank"><i className="fab fa-github-alt" aria-hidden="true"></i><span className="sr-only">Github</span></a>
             </div>
             <p>Copyright 2019 by Rupak Basu</p>
           </div>

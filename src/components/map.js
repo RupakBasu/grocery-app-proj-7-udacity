@@ -1,11 +1,24 @@
 import React from 'react';
 
-// This map js file represents the map component.
+import {load_google_maps} from './renderingMapParts'
 
 class Map extends React.Component {
   componentDidMount(){
-    console.log(this);
-    // the console.log helps us identify what props are passed.
+    this.load_map();
+  }
+
+  load_map() {
+    load_google_maps()
+    .then(google => {
+       const map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+       });
+       const marker = new google.maps.Marker({
+            position: {lat: -34.397, lng: 150.644},
+            map: map
+         });
+      })
   }
 
   render() {
@@ -15,7 +28,7 @@ class Map extends React.Component {
     return(
       <div>
         <div id="map">
-          <h1>This is a map of Chicago</h1>
+
         </div>
       </div>
     )
