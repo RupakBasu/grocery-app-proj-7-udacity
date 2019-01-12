@@ -5,6 +5,7 @@ import './App.css';
 // import {load_google_maps} from './components/googlemaploadingfunction';
 
 import Map from "./components/map";
+import MenuButton from "./components/menuButton";
 
 class App extends Component {
 
@@ -24,6 +25,13 @@ class App extends Component {
   //   }
   //
   // }
+
+  toggleMenu(){
+    console.log('the menu button was clicked')
+  }
+
+
+
   render() {
     return (
       <div className="App">
@@ -38,6 +46,10 @@ class App extends Component {
           <div class="navigationBar">
             <div class="navText">
               <h1 class= "navBarText"> Potential nav bar </h1>
+              <button onClick = {this.toggleMenu}>
+                Locations
+              </button>
+              <MenuButton/>
             </div>
           </div>
         </section>

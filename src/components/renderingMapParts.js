@@ -54,4 +54,5 @@ const initiateMapFunction = function (produceMap)
 const paintMapOnPage = function () {
   showGoogleMap
     .then ()
-}
+    .catch(error => console.log (error))
+};

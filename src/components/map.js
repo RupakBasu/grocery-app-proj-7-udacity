@@ -9,6 +9,9 @@ class Map extends React.Component {
   }
 
   render() {
+    const styles ={
+      alignItems:'center'
+    }
     return(
       <div>
         <div id="map">
