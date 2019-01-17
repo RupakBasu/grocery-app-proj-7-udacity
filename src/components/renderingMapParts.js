@@ -9,7 +9,7 @@ export function load_google_maps() {
      scriptTag.defer = true;
 
      window.initMap = function() {
-       resolve(window.initMap);
+       resolve(window.google);
        delete window.initMap;
      }
 

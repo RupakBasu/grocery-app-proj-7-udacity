@@ -36,6 +36,7 @@ color: black;
 background-color:#7bc3d1;
 height: 40px;
 display: flex;
+width: 100vw;
 /* justify-content: center; */
 align-items: center;
 }
@@ -44,6 +45,13 @@ align-items: center;
 font-size: 15px;
 text-align:left;
 }
+/* .toogleButton{
+  position:absolute;
+  right: 10px;
+  background: brown;
+  height: 10px;
+  width:34px
+  } */
 /* map
 -----------------------------*/
 #map {
@@ -59,6 +67,7 @@ text-align:left;
 footer {
   text-align: center;
   background: #7bc3d1;
+  width: 100vw;
 }
 
 .contact-info a {

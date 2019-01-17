@@ -11,11 +11,11 @@ class Map extends React.Component {
     load_google_maps()
     .then(google => {
        const map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
+        center: {lat: 41.881832, lng: -87.623177},
+        zoom: 12
        });
        const marker = new google.maps.Marker({
-            position: {lat: -34.397, lng: 150.644},
+            position: {lat: 41.881832, lng: -87.623177},
             map: map
          });
       })

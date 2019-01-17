@@ -6,29 +6,31 @@ import './App.css';
 
 import Map from "./components/map";
 import MenuButton from "./components/menuButton";
+import SideNav from "./components/sideBar";
 
 class App extends Component {
 
-  // state = {
-  //   mapShowing = false;
-  // };
+  constructor(props,context){
+    super(props, context);
+    this.state = {
+      sideNavBarShowing :false
+    };
+    // this.toggleMenu = this.toogleMenu.bind(this);
+  }
 
-
-  // componentDidMount() {
-  //   console.log(this);
-  //   var map;
-  //   initMap() => {
-  //     map = new google.maps.Map(document.getElementById('map'), {
-  //       center: {lat: -34.397, lng: 150.644},
-  //       zoom: 8
-  //     });
-  //   }
+  // toggleMenu(){
+  //   this.setState(
+  //     {
+  //     sideNavBarShowing: true;
+  // });
+  // }
   //
+  // showSideNavFunction(){
+  //   if(sideNavBarShowing:true){
+  //
+  //   }
   // }
 
-  toggleMenu(){
-    console.log('the menu button was clicked')
-  }
 
 
 
@@ -45,14 +47,15 @@ class App extends Component {
         <section id="navBar">
           <div className="navigationBar">
             <div className="navText">
-              <h1 className= "navBarText"> Potential nav bar </h1>
-              <button onClick = {this.toggleMenu}>
-                Locations
-              </button>
+            <div className= "toogleButton">
               <MenuButton/>
+            </div>
+              <h1 className= "navBarText"> Potential nav bar </h1>
+
             </div>
           </div>
         </section>
+        <SideNav/>
         <Map/>
         <footer id="contact">
           <div className="ending">

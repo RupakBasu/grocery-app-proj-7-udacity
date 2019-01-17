@@ -13,3 +13,8 @@ export function load_google_maps(){
     document.body.appendChild(script);
   });
 }
+
+
+<button style={styles.container}>
+  This is a button
+</button>
