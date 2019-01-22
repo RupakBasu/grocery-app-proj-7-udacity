@@ -1,22 +1,16 @@
 import React from 'react';
 
-import SideNav from '../NavigationDrawer/sideBar';
+import MenuButton from '../NavigationBar/menuButton';
 
-// found at: https://www.w3schools.com/howto/howto_css_shapes.asp
-// found at: https://www.yourhtmlsource.com/stylesheets/cssspacing.html
-// found at: https://facebook.github.io/react-native/docs/layout-props
-
-class MenuButton extends React.Component {
+class CloseButton extends React.Component {
 
   state = {
-    sideNavBarShowing:false
+    sideNavBarShowing:true
   };
-
   render() {
-    console.log(this.props)
-    const { click } = this.props;
+
     const styles= {
-      menu:{
+      closebtn:{
         position:'absolute',
         right: '10px',
         height: '35px',
@@ -26,15 +20,15 @@ class MenuButton extends React.Component {
         marginTop: '2.5px',
         cursor: 'pointer'
       },
-      top:{
+      right:{
         position:'relative',
         marginTop: '2.5px',
         marginLeft:'-2px',
         background: 'white',
         height: '5px',
-        width:'25px',        
+        width:'25px',
       },
-      middle :{
+      m :{
         position:'relative',
         marginTop: '5px',
         marginLeft:'-2px',
@@ -42,12 +36,12 @@ class MenuButton extends React.Component {
         height: '5px',
         width:'25px',
       },
-      bottom :{
+      left :{
         position:'relative',
         marginTop: '5px',
         marginLeft:'-2px',
         marginBottom: '2.5px',
-        background: 'white',
+        background: 'red',
         height: '5px',
         width:'25px',
       }
@@ -56,22 +50,18 @@ class MenuButton extends React.Component {
     // // this is the function which is running my hamburger button
     // // <SideNav/> needs to slide open
     if (this.state.sideNavBarShowing === true) {
-      console.log('open button is firing')
-      return <SideNav/>
+      console.log('close button is firing')
+      return <MenuButton/>
 
     }
-    // onClick={() => this.setState({ sideNavBarShowing : true })}
-    // onClick={(click)}
-
-
     return(
       <div>
-        <button onClick={() => this.setState({ sideNavBarShowing : true })} className= "hamburgerContainer" style={styles.menu}>
-          <div className= "topHamburger" style={styles.top}>
+        <button onClick={() => this.setState({ sideNavBarShowing : false })} className= "hamburgerContainer" style={styles.closebtn}>
+          <div className= "rightClose" style={styles.right}>
           </div>
-          <div className= "middleHamburger" style={styles.middle}>
+          <div className= "close" style={styles.m}>
           </div>
-          <div className= "bottomHamburger" style={styles.bottom}>
+          <div className= "leftClose" style={styles.left}>
           </div>
         </button>
       </div>
@@ -80,4 +70,4 @@ class MenuButton extends React.Component {
 }
 
 
-export default MenuButton;
+export default CloseButton;

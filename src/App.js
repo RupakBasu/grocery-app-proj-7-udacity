@@ -37,7 +37,7 @@ class App extends Component {
         <section id="navBar">
          <NavigationBar sideNavClickHandler = {this.sideNavBarShowing}/>
         </section>
-        {sideNav}
+        {sideNav }
         <Map/>
         <footer id="contact">
           <Footer/>
