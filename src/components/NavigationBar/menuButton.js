@@ -32,7 +32,7 @@ class MenuButton extends React.Component {
         marginLeft:'-2px',
         background: 'white',
         height: '5px',
-        width:'25px',        
+        width:'25px',
       },
       middle :{
         position:'relative',

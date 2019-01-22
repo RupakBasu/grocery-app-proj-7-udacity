@@ -19,11 +19,9 @@ class SideNav extends React.Component {
     }
     return(
       <div>
-
-      <div className= "sideNav" style={styles.sideNavigation}>
-        <CloseButton/>
-      </div>
-
+        <div className= "sideNav" style={styles.sideNavigation}>
+          <CloseButton/>
+        </div>
       </div>
     )
   }
