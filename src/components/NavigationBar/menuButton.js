@@ -59,6 +59,7 @@ class MenuButton extends React.Component {
       console.log('open button is firing')
       return <SideNav/>
 
+
     }
     // onClick={() => this.setState({ sideNavBarShowing : true })}
     // onClick={(click)}
