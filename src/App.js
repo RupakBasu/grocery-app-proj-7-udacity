@@ -20,19 +20,22 @@ class App extends Component {
       });
     };
 
+
   render() {
+    console.log(this.props)
     let sideNav;
 
     if (this.state.sideNavBarShowing){
       sideNav = <SideNav/>
     }
+
     return (
       <div className="App">
         <section id="topBanner">
           <TopBanner/>
         </section>
         <section id="navBar">
-         <NavigationBar sideNavClickHandler = {this.sideNavClickHandler}/>
+         <NavigationBar sideNavClickHandler = {this.sideNavBarShowing}/>
         </section>
         {sideNav}
         <Map/>
