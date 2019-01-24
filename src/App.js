@@ -14,20 +14,16 @@ class App extends Component {
       sideNavBarShowing:false
     };
 
-    sideDrawerTogglerFunction = () => {
-      this.setState((prevState) => {
-        return {sideNavBarShowing:!prevState.sideNavBarShowing}
-      });
-    };
+    sideNavClicked(){
+      const showing = !this.state.sideNavBarShowing;
+      this.setState({sideNavBarShowing:showing})
+      // this.setState({someField:someValue})
+      console.log('menu button clicked')
+    }
 
 
   render() {
     console.log(this.props)
-    let sideNav;
-
-    if (this.state.sideNavBarShowing){
-      sideNav = <SideNav/>
-    }
 
     return (
       <div className="App">
@@ -35,9 +31,9 @@ class App extends Component {
           <TopBanner/>
         </section>
         <section id="navBar">
-         <NavigationBar sideNavClickHandler = {this.sideNavBarShowing}/>
+         <NavigationBar sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
         </section>
-        {sideNav }
+        <SideNav/>
         <Map/>
         <footer id="contact">
           <Footer/>

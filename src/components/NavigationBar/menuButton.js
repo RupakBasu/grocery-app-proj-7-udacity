@@ -7,14 +7,18 @@ import SideNav from '../NavigationDrawer/sideBar';
 // found at: https://facebook.github.io/react-native/docs/layout-props
 
 class MenuButton extends React.Component {
+  constructor(props){
+    super(props);
 
-  state = {
-    sideNavBarShowing:false
-  };
+  }
+
+  // this.handleClick = this.handleClick.bind(this);
+//https://reactjs.org/docs/handling-events.html
 
   render() {
     console.log(this.props)
-    const { click } = this.props;
+    const { sideNavBarShowing } = this.props;
+    const { sideNavClicked } = this.props;
     const styles= {
       menu:{
         position:'absolute',
@@ -52,22 +56,15 @@ class MenuButton extends React.Component {
         width:'25px',
       }
     }
-
-    // // this is the function which is running my hamburger button
-    // // <SideNav/> needs to slide open
-    if (this.state.sideNavBarShowing === true) {
-      console.log('open button is firing')
-      return <SideNav/>
+    if (sideNavBarShowing  === false) {
+      console.log('menu button is firing')
 
 
     }
-    // onClick={() => this.setState({ sideNavBarShowing : true })}
-    // onClick={(click)}
-
 
     return(
       <div>
-        <button onClick={() => this.setState({ sideNavBarShowing : true })} className= "hamburgerContainer" style={styles.menu}>
+        <button onClick={ sideNavClicked} className= "hamburgerContainer" style={styles.menu}>
           <div className= "topHamburger" style={styles.top}>
           </div>
           <div className= "middleHamburger" style={styles.middle}>

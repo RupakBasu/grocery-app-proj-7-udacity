@@ -5,13 +5,14 @@ import MenuButton from './menuButton';
 class NavigationBar extends React.Component {
   render() {
     console.log(this.props)
-    const { sideNavClickHandler } = this.props;
+    const { sideNavBarShowing } = this.props;
+    const { sideNavClicked } = this.props;
     return(
       <div>
         <div className="navigationBar">
           <div className="navText">
             <div className= "toogleButton">
-              <MenuButton click={sideNavClickHandler}/>
+              <MenuButton sideNavBarShowing={sideNavBarShowing} sideNavClicked={sideNavClicked}/>
             </div>
             <h1 className= "navBarText"> Potential nav bar </h1>
           </div>
