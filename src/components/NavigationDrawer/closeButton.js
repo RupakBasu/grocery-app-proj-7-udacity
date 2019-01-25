@@ -4,10 +4,10 @@ import MenuButton from '../NavigationBar/menuButton';
 
 class CloseButton extends React.Component {
 
-  state = {
-    sideNavBarShowing:true
-  };
+
   render() {
+    const { sideNavBarShowing } = this.props;
+    const { sideNavClicked } = this.props;
     const styles= {
       closebtn:{
         position:'absolute',
@@ -48,14 +48,14 @@ class CloseButton extends React.Component {
 
     // // this is the function which is running my hamburger button
     // // <SideNav/> needs to slide open
-    if (this.state.sideNavBarShowing === false) {
+    if (sideNavBarShowing  === false) {
       console.log('close button is firing')
       return <MenuButton/>
 
     }
     return(
       <div>
-        <button onClick={() => this.setState({ sideNavBarShowing : false })} className= "hamburgerContainer" style={styles.closebtn}>
+        <button onClick={ sideNavClicked} className= "hamburgerContainer" style={styles.closebtn}>
           <div className= "rightClose" style={styles.right}>
           </div>
           <div className= "leftClose" style={styles.left}>

@@ -10,17 +10,20 @@ import Footer from './components/Footer/footer';
 
 class App extends Component {
 
-    state = {
+  constructor(props){
+    super(props);
+
+    this.state = {
       sideNavBarShowing:false
     };
-
+    this.sideNavClicked = this.sideNavClicked.bind(this);
+  }
     sideNavClicked(){
-      const showing = !this.state.sideNavBarShowing;
-      this.setState({sideNavBarShowing:showing})
-      // this.setState({someField:someValue})
-      console.log('menu button clicked')
+      this.setState(prevState => ({
+        sideNavBarShowing: !prevState.sideNavBarShowing
+       }));
+      console.log('menu button clicked but side drawer is hidden')
     }
-
 
   render() {
     console.log(this.props)
@@ -33,7 +36,7 @@ class App extends Component {
         <section id="navBar">
          <NavigationBar sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
         </section>
-        <SideNav/>
+        <SideNav sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
         <Map/>
         <footer id="contact">
           <Footer/>
