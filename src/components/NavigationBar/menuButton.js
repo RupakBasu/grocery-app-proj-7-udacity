@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SideNav from '../NavigationDrawer/sideBar';
+import CloseButton from './closeButton';
 
 // found at: https://www.w3schools.com/howto/howto_css_shapes.asp
 // found at: https://www.yourhtmlsource.com/stylesheets/cssspacing.html
@@ -58,9 +59,17 @@ class MenuButton extends React.Component {
     }
     if (sideNavBarShowing  === true) {
       console.log('menu button is firing')
-      return <SideNav/>
+      return (
+        <SideNav/>,
+        <CloseButton/>
 
+      )
+    } else {
+      if (sideNavBarShowing  === false) {
+        console.log('close button is firing')
+        return <MenuButton/>
 
+      }
     }
 
     return(

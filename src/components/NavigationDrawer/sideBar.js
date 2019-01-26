@@ -1,29 +1,34 @@
 import React from 'react';
 
-import CloseButton from './closeButton';
+
 
 class SideNav extends React.Component {
   render() {
-    const { sideNavBarShowing } = this.props;
-    const { sideNavClicked } = this.props;
+
     const styles= {
       sideNavigation:{
-        position:'fixed',
+        position:'absolute',
         // left:'0',
         // top:'0',
-        width: '200px',
+        width: '30%',
         height:'100vh',
         // transform:'translate3d(-200vw, 0, 0)',
         // slides it to the left and hides it
         background:'black',
-        zIndex: '1'
+        zIndex: '1',
+
+      },
+      suggestions:{
+        color: 'white'
       },
     }
     return(
       <div>
-        <div className= "sideNav" style={styles.sideNavigation}>
-          <CloseButton sideNavBarShowing={sideNavBarShowing} sideNavClicked={sideNavClicked}/>
-        </div>
+          <div className= "sideNav" style={styles.sideNavigation}>
+            <div className= "suggestionList" style={styles.suggestions}>
+              <h3>Suggested Location List</h3>
+            </div>
+          </div>
       </div>
     )
   }

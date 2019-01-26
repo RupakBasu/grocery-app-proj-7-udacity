@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 import TopBanner from './components/TopBanner/topBanner';
-import Map from './components/GoogleMap/map';
+import MainContent from './components/MainContent/mainContent';
 import NavigationBar from './components/NavigationBar/navigationBar';
-import SideNav from './components/NavigationDrawer/sideBar';
 import Footer from './components/Footer/footer';
 
 class App extends Component {
@@ -36,8 +35,9 @@ class App extends Component {
         <section id="navBar">
          <NavigationBar sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
         </section>
-        <SideNav sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
-        <Map/>
+        <section id="mainContentArea">
+          <MainContent sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
+        </section>
         <footer id="contact">
           <Footer/>
         </footer>
