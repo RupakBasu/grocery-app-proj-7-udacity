@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Suggestions from './suggestedLocations';
 
 
 class SideNav extends React.Component {
@@ -26,7 +27,7 @@ class SideNav extends React.Component {
       <div>
           <div className= "sideNav" style={styles.sideNavigation}>
             <div className= "suggestionList" style={styles.suggestions}>
-              <h3>Suggested Location List</h3>
+              <Suggestions/>
             </div>
           </div>
       </div>
