@@ -4,6 +4,15 @@ import Map from '../GoogleMap/map';
 import SideNav from '../NavigationDrawer/sideBar';
 
 
+function HiddenDrawer(props) {
+  if (!props.show) {
+    return null;
+  }
+  return (
+    <SideNav/>
+  );
+}
+
 class MainContent extends React.Component {
   render() {
     console.log(this.props)
@@ -12,8 +21,11 @@ class MainContent extends React.Component {
 
     return(
       <div className='mainBodyItems'>
-        <SideNav sideNavBarShowing ={sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
+        <HiddenDrawer show={sideNavBarShowing} />
         <Map/>
+        {/* <button onClick={sideNavClicked}>
+          {sideNavBarShowing ? 'Hide' : 'Show'}
+        </button> */}
       </div>
     )
   }

@@ -60,7 +60,6 @@ class MenuButton extends React.Component {
     if (sideNavBarShowing  === true) {
       console.log('menu button is firing')
       return (
-        <SideNav/>,
         <CloseButton/>
       )
     } else {
