@@ -62,7 +62,6 @@ class MenuButton extends React.Component {
       return (
         <SideNav/>,
         <CloseButton/>
-
       )
     } else {
       if (sideNavBarShowing  === false) {
@@ -74,7 +73,7 @@ class MenuButton extends React.Component {
 
     return(
       <div>
-        <button onClick={ sideNavClicked} className= "hamburgerContainer" style={styles.menu}>
+        <button onClick={sideNavClicked} className= "hamburgerContainer" style={styles.menu}>
           <div className= "topHamburger" style={styles.top}>
           </div>
           <div className= "middleHamburger" style={styles.middle}>

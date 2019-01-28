@@ -7,6 +7,16 @@ import MainContent from './components/MainContent/mainContent';
 import NavigationBar from './components/NavigationBar/navigationBar';
 import Footer from './components/Footer/footer';
 
+function HiddenDrawer(props) {
+  if (!props.show) {
+    return null;
+  }
+
+  return (
+    <div className="sideNav">
+    </div>
+  );
+}
 class App extends Component {
 
   constructor(props){
@@ -29,6 +39,10 @@ class App extends Component {
 
     return (
       <div className="App">
+        <HiddenDrawer show={this.state.sideNavBarShowing} />
+        <button onClick={this.sideNavClicked}>
+          {this.state.sideNavBarShowing ? 'Hide' : 'Show'}
+        </button>
         <section id="topBanner">
           <TopBanner/>
         </section>
