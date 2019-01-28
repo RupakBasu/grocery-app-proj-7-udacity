@@ -7,14 +7,15 @@ import MainContent from './components/MainContent/mainContent';
 import NavigationBar from './components/NavigationBar/navigationBar';
 import Footer from './components/Footer/footer';
 
+import SideNav from './components/NavigationDrawer/sideBar';
+
 function HiddenDrawer(props) {
   if (!props.show) {
     return null;
   }
 
   return (
-    <div className="sideNav">
-    </div>
+    <SideNav/>
   );
 }
 class App extends Component {
@@ -39,7 +40,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <HiddenDrawer show={this.state.sideNavBarShowing} />
+      <HiddenDrawer show={this.state.sideNavBarShowing} />
         <button onClick={this.sideNavClicked}>
           {this.state.sideNavBarShowing ? 'Hide' : 'Show'}
         </button>
@@ -48,6 +49,7 @@ class App extends Component {
         </section>
         <section id="navBar">
          <NavigationBar sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
+
         </section>
         <section id="mainContentArea">
           <MainContent sideNavBarShowing ={this.state.sideNavBarShowing} sideNavClicked={this.sideNavClicked}/>
