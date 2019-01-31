@@ -2,7 +2,9 @@ import React from 'react';
 
 import Map from '../GoogleMap/map';
 import SideNav from '../NavigationDrawer/sideBar';
+// import {fourSquarePlaces} from '../FoursquareAPI/foursquareLocationsAPI'
 
+import * as LocationsAPI from "../FoursquareAPI/foursquareLocationsAPI";
 
 function HiddenDrawer(props) {
   if (!props.show) {
@@ -14,7 +16,12 @@ function HiddenDrawer(props) {
 }
 
 class MainContent extends React.Component {
+
+  componentDidMount() {
+    LocationsAPI.fourSquarePlaces().then(resp => console.log("RESP",resp));
+}
   render() {
+    console.log('Response')
     console.log(this.props)
     const { sideNavBarShowing } = this.props;
     const { sideNavClicked } = this.props;

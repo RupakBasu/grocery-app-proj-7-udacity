@@ -40,7 +40,7 @@ class FourSquareLocations extends React.Component {
   }
 
   render() {
-    var storeLocationList = this.state.storeSuggestions.map((item) =>
+    var storeLocationList = this.state.storeSuggestions.map(item =>
       <li> {item.venue.name}</li>
     );
     return(
