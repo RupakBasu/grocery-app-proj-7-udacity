@@ -6,8 +6,8 @@ class Search extends React.Component {
   render() {
     const styles= {
       searchbox:{
-        // position:'absolute',
-        width: '70%',
+        // textAlign: 'center',
+        // width: '70%',
         background:'yellow',
 
       },

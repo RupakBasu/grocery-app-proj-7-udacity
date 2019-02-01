@@ -46,7 +46,7 @@ class FourSquareLocations extends React.Component {
     return(
       <div >
         <div>
-          {/* {storeLocationList} */}
+          {/* {storeLocationList} */} 
         </div>
       </div>
     )
