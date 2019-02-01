@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import {LocationInfoGenerator} from '../FoursquareAPI/APILocationList'
 
 class FourSquareLocations extends React.Component {
   constructor(props){
@@ -40,13 +40,13 @@ class FourSquareLocations extends React.Component {
   }
 
   render() {
-    var storeLocationList = this.state.storeSuggestions.map(item =>
-      <li> {item.venue.name}</li>
-    );
+    // var storeLocationList = this.state.storeSuggestions.map(item =>
+    //   <li> {item.venue.name}</li>
+    // );
     return(
       <div >
         <div>
-          {storeLocationList}
+          {/* {storeLocationList} */}
         </div>
       </div>
     )
