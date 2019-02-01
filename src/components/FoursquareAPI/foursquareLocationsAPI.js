@@ -14,10 +14,10 @@ const LOCATION='Chicago, IL'
 const CATEGORYID='4bf58dd8d48988d118951735'
 
 export const fourSquarePlaces = ()=>{
-  fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=${CATEGORYID}&near=${LOCATION}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${YYYYMMDD}
+  return fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=${CATEGORYID}&near=${LOCATION}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${YYYYMMDD}
     `)
     .then(resp =>resp.json())
-    .then(output => output.response.groups[0].items);
+    .then(result => result.response.groups[0].items);
     {/* .then(output => console.log(output.response.groups[0].items));*/}
 };
 
