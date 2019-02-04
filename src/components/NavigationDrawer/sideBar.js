@@ -5,6 +5,7 @@ import Suggestions from './suggestedLocations';
 
 class SideNav extends React.Component {
   render() {
+    const suggestedPlaces = this.props.suggestedPlaces;
 
     const styles= {
       sideNavigation:{
@@ -27,7 +28,7 @@ class SideNav extends React.Component {
       <div>
           <div className= "sideNav" style={styles.sideNavigation}>
             <div className= "suggestionList" style={styles.suggestions}>
-              <Suggestions/>
+              <Suggestions suggestedPlaces={suggestedPlaces}/>
             </div>
           </div>
       </div>

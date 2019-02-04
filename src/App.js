@@ -7,9 +7,6 @@ import MainContent from './components/MainContent/mainContent';
 import NavigationBar from './components/NavigationBar/navigationBar';
 import Footer from './components/Footer/footer';
 
-
-
-
 class App extends Component {
 
   constructor(props){

@@ -3,17 +3,15 @@ import React from 'react';
 import SideNav from './sideBar';
 import Search from './search';
 
-
 import LocationInfoGenerator from '../FoursquareAPI/APILocationList';
 
 class Suggestions extends React.Component {
   render() {
+    const suggestedPlaces = this.props.suggestedPlaces;
     console.log(this.props)
     const styles= {
       sideBarContentFormat:{
         textAlign: 'center',
-
-
       },
     }
 
@@ -21,9 +19,7 @@ class Suggestions extends React.Component {
       <div className='mainBodyItems'style={styles.sideBarContentFormat}>
         <h3>Suggested Location List</h3>
         <Search/>
-
-        <LocationInfoGenerator/>
-
+        <LocationInfoGenerator suggestedPlaces={suggestedPlaces}/>
       </div>
     )
   }
