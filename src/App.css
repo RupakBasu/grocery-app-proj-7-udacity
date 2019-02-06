@@ -60,7 +60,36 @@ text-align:left;
   background-color: green;
 }
 
+/* addressBlock
+-----------------------------*/
 
+.addressBlock p {
+  margin: 4px;
+}
+
+.addressBlock {
+  /* border: solid; */
+  background-color: white;
+  color:#175889;
+  font: BrandonGrotesque-Regular;
+}
+
+.color:hover {
+  background: #175889;
+  color:white;
+}
+.center {
+  position: relative;
+}
+
+ol li{
+  list-style-type: none;
+  /* this got rid of the numbers next to each location */
+}
+ol{
+  padding: 0px;
+  /* This got rid of the 40px on the left of the address box */
+}
 
 /*Footer
 ------------------------------------*/

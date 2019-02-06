@@ -39,11 +39,11 @@ class MainContent extends React.Component {
     return(
       <div className='mainBodyItems'>
         <HiddenDrawer show={sideNavBarShowing}/>
-        <LocationInfoGenerator suggestedPlaces = {this.state.location}/>
+        <SideNav suggestedPlaces = {this.state.location}/>
         <Map suggestedPlaces = {this.state.location}/>
-       <button onClick={sideNavClicked}>
-          {sideNavBarShowing ? 'Hide' : 'Show'}
-        </button>
+       // <button onClick={sideNavClicked}>
+       //    {sideNavBarShowing ? 'Hide' : 'Show'}
+       // </button>
       </div>
     )
   }

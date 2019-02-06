@@ -5,16 +5,18 @@ import React from 'react';
 class LocationInfoGenerator extends React.Component {
 
   render() {
-    const suggestedPlaces = this.props.location;
+    const places= this.props.suggestedPlaces || [];
     console.log(this.props)
     return(
       <div>
-        <li> This is a location </li>
+      <p> TEST</p>       
         <ol>
-          {location.map(suggestedPlaces =>(
-            <li>
-             <div>
-               <h2>{suggestedPlaces.venue.name}</h2>
+          {places.map(place =>(
+            <li key ={place.venue.id}>
+              <div className= 'addressBlock color center' >
+                <h2>{place.venue.name}</h2>
+                <p>{place.venue.location.address}</p>
+                <p>{place.venue.location.formattedAddress[1]}</p>
               </div>
             </li>
           ))}

@@ -16,12 +16,12 @@ class SideNav extends React.Component {
         height:'100vh',
         // transform:'translate3d(-200vw, 0, 0)',
         // slides it to the left and hides it
-        background:'lightgreen',
+        background:'white',
         zIndex: '1',
 
       },
       suggestions:{
-        color: 'white'
+        color: 'black'
       },
     }
     return(
