@@ -22,6 +22,7 @@ class Map extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const styles ={
       alignItems:'center'
     }

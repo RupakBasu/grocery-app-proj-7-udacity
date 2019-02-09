@@ -9,18 +9,21 @@ class LocationInfoGenerator extends React.Component {
     console.log(this.props)
     return(
       <div>
-      <p> TEST</p>       
-        <ol>
-          {places.map(place =>(
-            <li key ={place.venue.id}>
-              <div className= 'addressBlock color center' >
-                <h2>{place.venue.name}</h2>
-                <p>{place.venue.location.address}</p>
-                <p>{place.venue.location.formattedAddress[1]}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className='g'>
+            <ol>
+              {places.map(place =>(
+                <li key ={place.venue.id}>
+                  <div className= 'addressBlock color center' >
+                    <h2>{place.venue.name}</h2>
+                    <p>{place.venue.location.address}</p>
+                    <p>{place.venue.location.formattedAddress[1]}</p>
+                    <p>{place.venue.location.lat}</p>
+                    <p>{place.venue.location.lng}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
       </div>
 
     )
