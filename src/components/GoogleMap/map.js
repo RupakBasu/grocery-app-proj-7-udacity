@@ -14,14 +14,24 @@ class Map extends React.Component {
         center: {lat: 41.881832, lng: -87.623177},
         zoom: 12
        });
-       const marker = new google.maps.Marker({
-            position: {lat: 41.881832, lng: -87.623177},
-            map: map
-         });
+
+       // const marker = new google.maps.Marker({
+       //      position: {lat: 41.881832, lng: -87.623177},
+       //      map: map
+       //   });
+
+
+         const marker = new google.maps.Marker({
+              position: {lat: 41.881832, lng: -87.623177},
+              map: map
+           });
+
       })
   }
 
   render() {
+    const places= this.props.suggestedPlaces || [];
+    console.log(places)
     console.log(this.props)
     const styles ={
       alignItems:'center'
