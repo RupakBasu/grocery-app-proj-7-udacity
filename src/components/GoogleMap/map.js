@@ -29,9 +29,16 @@ class Map extends React.Component {
       })
   }
 
+  // locationMarker = places.map.Marker({
+  //      position: {
+  //        lat: places.venue.location.lat,
+  //        lng: places.venue.location.lng
+  //      },
+  //      map: map
+  //   });
+
   render() {
     const places= this.props.suggestedPlaces || [];
-    console.log(places)
     console.log(this.props)
     const styles ={
       alignItems:'center'
